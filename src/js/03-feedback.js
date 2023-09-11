@@ -24,7 +24,7 @@ function restoreForm() {
     emailField.value = savedData.email;
     messageField.value = savedData.message;
     };
-  formData = savedData;
+  formValues = savedData;
 };
 
 restoreForm();
