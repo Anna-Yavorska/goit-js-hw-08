@@ -14,21 +14,3 @@ export function createMarkup(array) {
     })
     .join('');
 }
-
-export function handleImageClick(event) {
-    
-    if (event.target === event.currentTarget) {
-      return;
-    }
-    
-    const targetElement = event.target.closest('li');
-    const source = targetElement.dataset.preview;
-    const image = galleryItems.find(image => image.preview === source);
-    
-    const instance = basicLightbox.create(`
-    <div class="modal">
-        <img src="${image.original}" alt="${image.description}"/>
-    </div>
-`);
-    instance.show();
-};
